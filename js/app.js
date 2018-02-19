@@ -31,11 +31,11 @@ function popupResult(result) {
 function drawFrame() {
   var img = new Image();
   img.crossOrigin = "Anonymous";
-  img.src = 'images/frame.png';  
+  img.src = 'images/twibbonsyamil.gif';  
   img.onload = function() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     popupResult({
-			src: document.getElementById('imageCanvas').toDataURL('image/png'),
+			src: document.getElementById('imageCanvas').toDataURL('image/gif'),
 		});
 	console.log('popup ok');
   }
