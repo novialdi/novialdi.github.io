@@ -13,7 +13,7 @@ function popupResult(result) {
   }
   if (result.src) {
   	html = '<img src="' + result.src + '" />' +
-    '<a href="'+ result.src +'" id="downloadlink" class="button" download="profileGamais.jpg">Download</a>' +
+    '<a href="'+ result.src +'" id="downloadlink" class="button" download="twibonsyamil.gif">Download</a>' +
     '<button class="confirm button" tabindex="1">Cancel</button>';
   }
   swal({
@@ -31,11 +31,11 @@ function popupResult(result) {
 function drawFrame() {
   var img = new Image();
   img.crossOrigin = "Anonymous";
-  img.src = 'images/frame.png';  
+  img.src = 'images/twibbonsyamil.gif';  
   img.onload = function() {
     ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     popupResult({
-			src: document.getElementById('imageCanvas').toDataURL('image/png'),
+			src: document.getElementById('imageCanvas').toDataURL('image/gif'),
 		});
 	console.log('popup ok');
   }
@@ -100,7 +100,7 @@ function downloadCanvas(link, canvasId, filename) {
 }
 
 $('#downloadlink').on('click', '.sweet-alert', function() {
-  downloadCanvas(this, 'imageCanvas', 'profileGamais.jpg');
+  downloadCanvas(this, 'imageCanvas', 'twibonsyamil.gif');
 });
 
 
